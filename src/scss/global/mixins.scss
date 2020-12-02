@@ -1,0 +1,11 @@
+@mixin mq($from, $to: false) {
+  @if $to {
+	@media (min-width: $from + 0px) and (max-width: $to + 0px) {
+	  @content;
+	}
+  } @else {
+	@media (max-width: $from + 0px) {
+	  @content;
+	}
+  }
+}

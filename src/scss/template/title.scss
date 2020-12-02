@@ -1,0 +1,33 @@
+.title {
+    display: inline-flex;
+    margin: 0 32px 48px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #F4F4F4;
+    background: #1519FF;
+
+    @include mq(1279) {
+        font-size: 48px;
+        line-height: 120%;
+    }
+
+    @include mq(1023) {
+        margin: 0 8px 48px;
+    }
+
+    @include mq(767) {
+        display: inline;
+	    box-decoration-break: clone;
+        margin: 0 20px 0;
+        padding: 0 4px;
+        font-size: 30px;
+        line-height: 120%;
+    }
+
+    @include mq(359) {
+        margin: 0;
+    }
+}

@@ -1,0 +1,179 @@
+.voluptatem {
+    width: 100%;
+    padding: 96px 0;
+
+    @include mq(1023) {
+        padding: 76px 0;
+    }
+
+    &__elements {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 18px;
+
+        @include mq(1023) {
+            padding: 0 8px;
+        }
+
+        @include mq(767) {
+            padding: 33px 24px 0;
+        }
+
+        @include mq(359) {
+            padding: 33px 0 0;
+        }
+    }
+
+    &__element {
+        display: flex;
+        width: calc(50% - 32px);
+        margin: 0 16px 24px;
+
+        @include mq(1279) {
+            width: 100%;
+            margin: 0 0 48px;
+        }
+
+        @include mq(767) {
+            flex-direction: column;
+            margin: 0 0 45px;
+        }
+
+        &:nth-child(3n) .voluptatem__element-block:last-child,
+        &:nth-child(4n) .voluptatem__element-block:last-child {
+            @include mq(1280, 9999) {
+                order: -1;
+                padding-left: 2px;
+            }
+        }
+
+        &-block {
+            width: 100%;
+
+            &:first-child {
+                display: flex;
+
+                @include mq(1024, 9999) {
+                    max-width: 294px;
+                }
+
+                @include mq(1023) {
+                    max-width: 344px;
+                }
+
+                @include mq(767) {
+                    margin: 0 auto;
+                }
+            }
+
+            &:last-child {
+                max-width: 306px;
+                padding: 24px 31px;
+                border-top: 1px solid rgba(#000, 0.3);
+
+                @include mq(1279) {
+                    max-width: 100%;
+                }
+
+                @include mq(1023) {
+                    padding: 21px 18px;
+                }
+
+                @include mq(767) {
+                    max-width: fit-content;
+                    order: -1;
+                    padding: 17px 0;
+                }
+            }
+
+            > img {
+                min-width: 294px;
+                max-height: 294px;
+
+                @include mq(1023) {
+                    min-width: 100%;
+                    max-width: 343px;
+                    min-height: 100%;
+                    max-height: 343px;
+                }
+
+                @include mq(767) {
+                    max-width: 100%;
+                    max-height: fit-content;
+                }
+            }
+        }
+
+        &-title {
+            margin: 0 0 6px;
+            font-size: 20px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: #000000;
+
+            @include mq(1023) {
+                font-size: 18px;
+            }
+
+            @include mq(767) {
+                font-size: 14px;
+            }
+        }
+
+        &-subtitle {
+            margin: 0 0 25px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 170%;
+            color: #676767;
+
+            @include mq(1023) {
+                margin: 0 0 21px;
+                font-size: 14px;
+            }
+
+            @include mq(767) {
+                margin: 0 0 10px;
+                font-size: 12px;
+            }
+        }
+
+        &-date {
+            margin: 0 0 12px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 170%;
+            color: #000000;
+
+            @include mq(1023) {
+                margin: 0 0 10px;
+                font-size: 14px;
+            }
+
+            @include mq(767) {
+                margin: 0 0 7px;
+                font-size: 12px;
+            }
+        }
+
+        &-desc {
+            margin: 0 0 20px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 170%;
+            color: #676767;
+
+            @include mq(1023) {
+                margin: 0;
+                font-size: 14px;
+            }
+
+            @include mq(767) {
+                font-size: 12px;
+            }
+        }
+    }
+}

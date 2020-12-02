@@ -1,0 +1,53 @@
+<section class="subscribe">
+    <div class="container">
+        <h2 class="title">Voluptatem illo assumenda</h2>
+
+        <div class="subscribe__elements">
+            <div class="subscribe__element">
+                <div class="content">
+                    <ul>
+                        <li><strong>Start: </strong>october 29</li>
+                        <li><strong>Remained: </strong>15 seats</li>  
+                    </ul>
+                    <p>Use the cross-platform SAS bandwidth, then you can calculate the mobile bandwidth!</p>
+                </div>
+            </div>
+            <div class="subscribe__element">
+                <div class="subscribe-price">
+                    <p class="subscribe-price__title">Labore qui et animi.</p>
+                    <div class="subscribe-price__full">
+                        <div class="subscribe-price__current">
+                            <p class="subscribe-price__price"><span>4 900</span><i class="rub">₽</i></p>
+                            <p class="subscribe-price__time">per month</p>
+                        </div>
+                        <div class="subscribe-price__sale"><span>-40%</span><span>until 28 december</span></div>
+                    </div>
+                    <p class="subscribe-price__desc">installment plan without discount</p>
+                    <p class="subscribe-price__old"><span>5000 <i class="rub">₽</i></span><span> /month</span></p>
+                </div>
+            </div>
+            <div class="subscribe__element">
+
+                <form method="get" action="/json/response200.json" class="form js-form js-validate">
+                    <div class="form__group js-parent-input-error">
+                        <input class="form__input" id="email" name="email" type="text" autocomplete="off" data-rule-realemail="true" maxlength="30">
+                        <label class="form__label" for="email">Your email</label>
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="form__group js-parent-input-error">
+                        <input class="form__input" id="phone" name="phone" type="tel" autocomplete="off" required>
+                        <label class="form__label" for="phone">Your phone</label>
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="form__group js-parent-input-error">
+                        <input class="form__input js-letter-input" id="name" type="text" name="name" autocomplete="off" required maxlength="15"/>
+                        <label class="form__label" for="name">Your name</label>
+                        <div class="error-message"></div>
+                    </div>
+    
+                    <a class="btn js-submit" href="javascript:;">Subscribe</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

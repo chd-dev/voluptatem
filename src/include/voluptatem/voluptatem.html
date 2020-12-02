@@ -1,0 +1,19 @@
+<section class="voluptatem">
+    <div class="container">
+        <h2 class="title">Voluptatem illo assumenda</h2>
+
+        <div class="voluptatem__elements">
+            {{#each voluptatem.elements}}
+                <a href="{{link}}" class="voluptatem__element">
+                    <div class="voluptatem__element-block"><img src="{{img}}" alt=""></div>
+                    <div class="voluptatem__element-block">
+                        <h4 class="voluptatem__element-title">{{title}}</h4>
+                        <p class="voluptatem__element-subtitle">{{subtitle}}</p>
+                        <p class="voluptatem__element-date">{{date}}</p>
+                        <p class="voluptatem__element-desc">{{desc}}</p>
+                    </div>
+                </a>
+            {{/each}}
+        </div>
+    </div>
+</section>

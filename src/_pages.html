@@ -1,0 +1,12 @@
+﻿---
+title: Страницы
+layout: default
+---
+<div class="js-placeholder" style="max-width:500px; margin:150px auto;">
+    <h1>Страницы</h1>
+    <br /><br />
+
+    {{#each _pages}}
+    <div><a href="{{file}}">{{title}} ({{file}})</a></div>
+    {{/each}}
+</div>

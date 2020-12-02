@@ -1,0 +1,139 @@
+.form {
+    position: relative;
+	width: 100%;
+	padding: 43px 0 0;
+
+	@include mq(1279) {
+		width: calc(50% - 10px);
+		padding: 25px 0 0;
+	}
+
+	@include mq(767) {
+		width: 100%;
+	}
+
+    &__group {
+        position: relative;
+        display: inline-block;
+        vertical-align: bottom;
+		width: 100%;
+		max-width: calc(100% - 15px);
+        margin: 0 0 16px;
+        text-align: left;
+		font-size: 18px;
+		
+		@include mq(1279) {
+			max-width: 100%;
+		}
+
+		@include mq(767) {
+			margin: 0 0 13px;
+		}
+    }
+
+    &__label {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+		font-size: 16px;
+		background: transparent;
+		color: #676767;
+        border: none;
+        pointer-events: none;
+		transition: all 350ms ease-in-out;
+		
+		@include mq(1279) {
+			font-size: 14px;
+		}
+
+		@include mq(767) {
+			font-size: 12px;
+		}
+    }
+
+    &__input {
+        position: relative;
+        padding: 0;
+		width: 100%;
+		height: 47px;
+		font-size: 16px;
+		color: #676767;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(#000, 0.2);
+        border-radius: 0;
+		transition: border-color 350ms;
+		
+		@include mq(1279) {
+			height: 38px;
+		}
+
+		@include mq(767) {
+			font-size: 15px;
+		}
+
+        &.is-error {
+            border-color: rgba(#ff0000, 0.4) !important;
+
+            &:focus:not(.has-value) + .form__label {
+                color: rgba(#ff0000, 0.4);
+            }
+
+            & + label {
+                color: rgba(#ff0000, 0.6)
+            }
+        }
+
+        // &.is-error {
+        //     border-color: rgba(#ef9a79, 0.7) !important;
+
+        //     &:focus:not(.has-value) + .form__label {
+        //         color: rgba(#ef9a79, 0.7);
+        //     }
+
+        //     & + label {
+        //         color: rgba(#ef9a79, 0.7);
+        //     }
+        // }
+
+        &:focus, &.has-value {
+            border-color: rgba(#d9d8d8, 0.4);
+        }
+
+        &:focus + .form__label,
+        &.has-value + .form__label {
+            top: -5px;
+            font-size: 13px;
+            color: #999;
+			transition: all 350ms ease-in-out;
+			
+			@include mq(767) {
+				font-size: 12px;
+			}
+        }
+
+        &.has-value.is-error + label {
+            color: rgba(#ff0000, 0.4)
+        }
+    }
+
+    .btn {
+		display: inline-flex;
+		margin: 16px 0;
+		font-family: 'Space Grotesk', sans-serif;
+        font-size: 30px;
+		line-height: 110%;
+		text-decoration-line: underline;
+		text-transform: uppercase;
+		color: #000000;
+
+		@include mq(1279) {
+			font-size: 20px;
+		}
+	}
+	
+	.error-message .is-error {
+		font-size: 12px;
+	}
+}
